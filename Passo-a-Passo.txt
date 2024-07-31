@@ -1,0 +1,28 @@
+git init | Isso dirá ao Git para começar a observar seus arquivos a cada alteração que ocorrer.
+
+git config --global user.name "ar7hursiega" 
+git config --global user.email "ar7hursiega@gmail.com" | Para definir seu nome de usuário, o qual fará as alterações.
+
+git add . | Se você quiser rastrear um arquivo específico, basta usar o comando: git add “nomedoarquivo.extencao”
+
+git status | Para saber em que estado seu arquivo está.
+
+git commit -m "first commit" | O próximo estado de um arquivo após o estado preparado é o estado confirmado. Para confirmar nosso arquivo, usamos esse comando.
+
+----------------------------------
+Envie o repositório para o GitHub:
+
+git remote add origin “endereço do seu diretorio”
+git branch -M main (altera o nome do seu branch principal para "main". )
+git push -u origin main(envia seu repositório do seu dispositivo local para o GitHub.)
+
+----------------------------------
+Alterando um ARQUIVO:
+
+git add .
+git commit -m "realizada alteração"
+git push -u origin main
+
+
+
+
