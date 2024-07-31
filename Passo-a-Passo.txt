@@ -1,3 +1,8 @@
+Criar pasta no diretótio C:\
+Criar repositório no GitHub para anexar endereço
+
+
+
 git init | Isso dirá ao Git para começar a observar seus arquivos a cada alteração que ocorrer.
 
 git config --global user.name "ar7hursiega" 
