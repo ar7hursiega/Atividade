@@ -28,6 +28,11 @@ git add .
 git commit -m "realizada alteração"
 git push -u origin main
 
+----------------------------------
+Clonando reposítório para a máquina:
+
+git clone "endereço do seu diretorio"
+
 
 
 
