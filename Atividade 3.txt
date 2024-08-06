@@ -1,0 +1,16 @@
+algoritmo "EscovarOsDentes"
+
+var
+Escova, Pasta, Tampa: boolean
+
+inicio
+Escova = 0
+Pasta = 0
+Tampa = 0
+
+Escreva: ("Pegue a Escova.")
+Escova = 1
+Escreva: ("Pegue a Pasta.")
+Pasta = 1
+Escreva: ("Abra a Tampa.")
+Tampa = 1
