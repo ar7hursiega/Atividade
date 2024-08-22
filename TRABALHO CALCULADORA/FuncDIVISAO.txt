@@ -1,0 +1,8 @@
+double FuncDIVISAO(double A, double B) {
+
+ double X = 0.0;
+ 
+  X = A / B;
+
+ return(X);
+}

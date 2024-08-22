@@ -1,0 +1,12 @@
+int main() {
+ do{
+ switch (variavel)
+ case 1
+ 
+ }while(diferente de 0)
+
+
+return(0);
+}
+
+!= diferente
