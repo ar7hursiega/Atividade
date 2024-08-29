@@ -1,0 +1,10 @@
+double FuncPOTENCIACAO(double B, int E) {
+
+ double VAL = 1.0;
+ 
+   for(int i = 0; i < E; i++)
+ 
+    VAL = VAL * B;  
+
+ return(VAL);
+}

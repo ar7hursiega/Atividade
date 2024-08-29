@@ -1,13 +1,16 @@
 #include <stdio.h>
 
-int FuncPOTENCIACAO(int B, int E);
+double FuncSOMA(double A, double B);
 
 int main() {
 	
 	int ENTRADA = 0;
-	int A = 0, B = 0;
-    int C = 0;
+	int D = 0, E = 0;
+	double A = 0.0, B = 0.0, C = 0.0;
 
+  do
+  {
+	  
   printf("0. Sair;\n");
   printf("1. Soma;\n");
   printf("2. Subtracao;\n");
@@ -23,29 +26,30 @@ int main() {
   
   scanf("%d",&ENTRADA);
   
-  switch(ENTRADA) {
-	  case 5:
+	  switch(ENTRADA) {
+	  case 1:
 	   printf("Digite o primeiro numero:\n");
-	   scanf("%d",&A);
+	   scanf("%lf",&A);
 	   printf("Digite o segundo numero:\n");
-	   scanf("%d",&B);
-	   C = FuncPOTENCIACAO(A,B);
-	   printf("O resultado e: %d", C);
+	   scanf("%lf",&B);
+	   C = FuncSOMA(A,B);
+	   printf("O resultado e: %.5lf\n", C);
 	  break;
 	}  
+  }while(ENTRADA != 0);
   
   return(0);
 
 }
 
-int FuncPOTENCIACAO(int B, int E) {
-	
-	int x =1;
-	for(int i = 1; i <= E; i++)
-	{
-		x *= B;
-	}
+double FuncSOMA(double A, double B) {
 
-	return (x);
+ double X = 0.0;
+ 
+  X = A + B;
+
+ return(X);
 }
+
+
 

@@ -3,6 +3,13 @@ double FuncDIVISAO(double A, double B) {
  double X = 0.0;
  
   X = A / B;
-
- return(X);
+  
+   if(B == 0)
+   {
+	   return(-1.0);
+   }
+   else
+   {
+       return(X);
+   }
 }

@@ -1,0 +1,10 @@
+int FuncFATORIAL(int A) { 
+
+ int VAL = 1;
+ 
+   for(int i = 0; i < A; i++) {
+    
+     VAL = VAL * (A - i);
+   }
+	return(VAL);
+}

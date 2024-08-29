@@ -1,0 +1,26 @@
+double FuncRAIZ(double A) {
+	
+	double Xk = 0.0;
+	double B = 0.5;
+	
+	if(A < 0) 
+	{
+	 return(-1.0);
+	}
+	else if(A == 0)
+	{
+		return(0.0);
+	}
+	else 
+	{
+		Xk = A;
+		
+		for(int i = 0; i < 100; i++ )
+		{	
+			Xk = B * (Xk + (A / Xk));
+		}
+	
+		return(Xk);
+	}
+	
+}
