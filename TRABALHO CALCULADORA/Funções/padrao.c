@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-double FuncSOMA(double A, double B);
+void funcEQUACAO(double A, double B, double C);
 
 int main() {
 	
 	int ENTRADA = 0;
 	int D = 0, E = 0;
-	double A = 0.0, B = 0.0, C = 0.0;
+	double A = 0.0, B = 0.0, C = 0.0, F = 0.0;
 
   do
   {
@@ -27,13 +27,15 @@ int main() {
   scanf("%d",&ENTRADA);
   
 	  switch(ENTRADA) {
-	  case 1:
+	  case 10:
 	   printf("Digite o primeiro numero:\n");
 	   scanf("%lf",&A);
 	   printf("Digite o segundo numero:\n");
 	   scanf("%lf",&B);
-	   C = FuncSOMA(A,B);
-	   printf("O resultado e: %.5lf\n", C);
+	   printf("Digite o terceiro numero:\n");
+	   scanf("%lf",&C);
+	   F = funcEQUACAO(A,B,C);
+	   printf("O resultado e: %.5lf\n", F);
 	  break;
 	}  
   }while(ENTRADA != 0);
@@ -41,15 +43,3 @@ int main() {
   return(0);
 
 }
-
-double FuncSOMA(double A, double B) {
-
- double X = 0.0;
- 
-  X = A + B;
-
- return(X);
-}
-
-
-

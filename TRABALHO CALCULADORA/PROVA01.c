@@ -7,12 +7,16 @@ double FuncDIVISAO(double A, double B);
 double FuncPOTENCIACAO(double B, int E);
 double FuncRAIZ(double A);
 int FuncFATORIAL(int A);
+void funcEQUACAO(double A, double B, double C);
 
 int main() {
 	
 	int ENTRADA = 0;
 	int D = 0, E = 0;
 	double A = 0.0, B = 0.0, C = 0.0;
+
+   do
+   {
 
   printf("0. Sair;\n");
   printf("1. Soma;\n");
@@ -30,13 +34,16 @@ int main() {
   scanf("%d",&ENTRADA);
   
   switch(ENTRADA) {
+	  case 0:
+	   return(0);
+	  break;
 	  case 1:
 	   printf("Digite o primeiro numero:\n");
 	   scanf("%lf",&A);
 	   printf("Digite o segundo numero:\n");
 	   scanf("%lf",&B);
 	   C = FuncSOMA(A,B);
-	   printf("O resultado e: %.5lf", C);
+	   printf("O resultado e: %.5lf\n\n", C);
 	  break;
 	  case 2:
 	   printf("Digite o primeiro numero:\n");
@@ -44,7 +51,7 @@ int main() {
 	   printf("Digite o segundo numero:\n");
 	   scanf("%lf",&B);
 	   C = FuncSUBTRACAO(A,B);
-	   printf("O resultado e: %.5lf", C);
+	   printf("O resultado e: %.5lf\n\n", C);
 	  break;
 	  case 3:
 	   printf("Digite o primeiro numero:\n");
@@ -52,7 +59,7 @@ int main() {
 	   printf("Digite o segundo numero:\n");
 	   scanf("%lf",&B);
 	   C = FuncMULTIPLICACAO(A,B);
-	   printf("O resultado e: %.5lf", C);
+	   printf("O resultado e: %.5lf\n\n", C);
 	  break;
 	  case 4:
 	   printf("Digite o primeiro numero:\n");
@@ -62,11 +69,11 @@ int main() {
 	   C = FuncDIVISAO(A,B);
 	   if(B == 0)
 	   {
-		 printf("Nao e possivel fazer uma divisao por 0!");  
+		 printf("Nao e possivel fazer uma divisao por 0!\n\n");  
 	   }
 	   else
 	   {
-		printf("O resultado e: %.5lf", C);
+		printf("O resultado e: %.5lf\n\n", C);
 	   }
 	  break;
 	  case 5:
@@ -75,7 +82,7 @@ int main() {
 	   printf("Digite o expoente:\n");
 	   scanf("%lf",&B);
 	   C = FuncPOTENCIACAO(A,B);
-	   printf("O resultado e: %.5lf", C);
+	   printf("O resultado e: %.5lf\n\n", C);
 	  break;
 	  case 6:
 	   printf("Digite o numero a ser calculado:\n");
@@ -83,23 +90,39 @@ int main() {
 	   C = FuncRAIZ(A);
 	   if(A < 0)
 	   {
-		   printf("Numeros negativos nao possuem Raiz Quadrada!");
+		   printf("Numeros negativos nao possuem Raiz Quadrada!\n\n");
 	   }
 	   else
 	   {
-	   printf("O resultado e: %lf", C);
+	   printf("O resultado e: %lf\n\n", C);
 	   }
 	  break;
 	  case 7:
 	   printf("Digite o numero a ser calculado:\n");
 	   scanf("%d",&E);
 	   D = FuncFATORIAL(E);
-	   printf("O resultado e: %d", D);
+	   printf("O resultado e: %d\n\n", D);
 	  break;
+	  case 10:
+	   printf("Digite o primeiro numero:\n");
+	   scanf("%lf",&A);
+	   printf("Digite o segundo numero:\n");
+	   scanf("%lf",&B);
+	   printf("Digite o terceiro numero:\n");
+	   scanf("%lf\n\n",&C);
+	   funcEQUACAO(A,B,C);
+	  break;
+	  
+	  default:
+	       
+		printf("A opcao digitada nao e valida\n");
 	}  
   
+   }while(ENTRADA != 0);
+      
   return(0);
 
+ 
 }
 
 double FuncSOMA(double A, double B) {
@@ -194,5 +217,31 @@ int FuncFATORIAL(int A) {
 	return(VAL);
 }
 
+void funcEQUACAO(double A, double B, double C) {
+	
+	double x1 = 0.0;
+	double x2 = 0.0;
+	double DELTA = 0.0;
+	
+	
+	 if(A != 0)
+	 {
+		DELTA = (FuncPOTENCIACAO(B,2) -4 * A * C); 
+	 
+	   if(DELTA >= 0)
+		   {
+			   x1 = ((-B) + (FuncRAIZ(DELTA))) / (2 * A);
+	           x2 = ((-B) - (FuncRAIZ(DELTA))) / (2 * A);
+			   printf("Os valores da Equacao de 2nd Grau serao:\n");
+			   printf("X1 = %.5lf\n", x1);
+			   printf("X2 = %.5lf", x2);
+		   }		   
+		   else
+		   {
+			   printf("Numeros negativos nao possuem Raiz Quadrada!");
+		   }
+	
+	 }
+}
 
 
